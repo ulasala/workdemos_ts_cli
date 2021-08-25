@@ -1,24 +1,15 @@
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
-interface Props {}
+import {TabNavigation} from './src/navigation/TabNavigation';
 
-const App = (props: Props) => {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Home Page</Text>
-    </View>
+    <NavigationContainer>
+      <TabNavigation />
+    </NavigationContainer>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
