@@ -5,12 +5,18 @@ interface Props {}
 
 const Transfer = (props: Props) => {
   return (
-    <View>
-      <Text>Transfer</Text>
+    <View style={styles.container}>
+      <Text>Transfer Screen</Text>
     </View>
   );
 };
 
 export default Transfer;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

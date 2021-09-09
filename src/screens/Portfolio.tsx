@@ -5,12 +5,18 @@ interface Props {}
 
 const Portfolio = (props: Props) => {
   return (
-    <View>
-      <Text>Portfolio</Text>
+    <View style={styles.container}>
+      <Text>Portfolio Screen</Text>
     </View>
   );
 };
 
 export default Portfolio;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

@@ -5,12 +5,18 @@ interface Props {}
 
 const Prices = (props: Props) => {
   return (
-    <View>
-      <Text>Prices</Text>
+    <View style={styles.container}>
+      <Text>Prices Screen</Text>
     </View>
   );
 };
 
 export default Prices;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

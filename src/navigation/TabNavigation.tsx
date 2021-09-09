@@ -1,19 +1,21 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, Text, View, TouchableOpacity} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {AppParamList} from './AppParamList';
+import {Icon} from 'react-native-elements';
 import Home from '../screens/Home';
 
 import Settings from './../screens/Settings';
 import Portfolio from './../screens/Portfolio';
 import Transfer from './../screens/Transfer';
 import Prices from './../screens/Prices';
+import Menu from './../components/Menu';
 
 interface TabNavigationProps {}
 
 const Tab = createBottomTabNavigator<AppParamList>();
 
-export const TabNavigation: React.FC<AppTabsProps> = ({}) => {
+export const TabNavigation: React.FC<AppTabsProps> = ({navigation}) => {
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -46,6 +48,19 @@ export const TabNavigation: React.FC<AppTabsProps> = ({}) => {
               </Text>
             </View>
           ),
+          // headerLeft: () => {
+          //   return <Menu />;
+          // },
+
+          // headerRight: () => {
+          //   return (
+          //     <TouchableOpacity onPress={() => {}}>
+          //       <View style={{padding: 10}}>
+          //         <Icon name="notifications" />
+          //       </View>
+          //     </TouchableOpacity>
+          //   );
+          // },
         }}
       />
 

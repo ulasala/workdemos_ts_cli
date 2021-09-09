@@ -12,6 +12,8 @@ target 'workdemos_ts_cli' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'workdemos_ts_cliTests' do
     inherit! :complete
     # Pods for testing
